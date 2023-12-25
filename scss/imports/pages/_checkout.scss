@@ -1,0 +1,1020 @@
+main.checkout-page{
+    padding-bottom: 30px;
+    background: white;
+    .checkout{
+        .main-content{
+            width: 600px;
+            margin: auto;
+            .module{
+                margin: 15px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .left{
+                    a{
+                        font-size: 12px;
+                        color: $main-red-cl;
+                        display: flex;
+                        align-items: center;
+                        font-family: sans-serif;
+                        font-weight: 500;
+                        img, .svg{
+                            width: 12px;
+                            transform: rotate(-180deg);
+                            margin-right: 5px;
+                            path{
+                                fill: $main-red-cl
+                            }
+                        }
+                    }
+                }
+                .right{
+                    font-size: 25px;
+                    h2{
+                        font-family: sans-serif;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .no-item{
+                margin-top: 50px;
+                text-align: center;
+                img{
+                    width: 40px;
+                    margin-bottom: 30px;
+                }
+                p{
+                    font-size: 22px;
+                    line-height: 1.4;
+                    margin-bottom: 10px;
+                }
+                a{
+                    font-size: 14px;
+                    margin-top: 30px;
+                    background-color: white;
+                    padding: 5px 10px;
+                    color: red;
+                    border: 1px solid #eee;
+                    display: inline-block;
+                    &:hover{
+                        background-color: #e6e6e6;
+                    }
+                }
+                @include mobile{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+            .cart{
+                background: white;
+                .product-info{
+                    padding: 15px;
+                    display: flex;
+                    
+                    .left{
+                        min-width: 150px;
+                        max-width: 150px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .right{
+                        padding-left: 15px;
+                        .product-name{
+                            font-size: 13px;
+                            font-family: sans-serif;
+                            font-weight: 700;
+                            color: #3c3d41;
+                            margin-bottom: 5px;
+                        }
+                        .price{
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: $red-price-cl;
+                        }
+                        .promotion-detail{
+                            margin-top: 5px;
+                            h4{
+                                font-size: 14px;
+                                font-weight: bold;
+                                font-family: sans-serif;
+                                margin-bottom: 10px;
+                                margin-top: 10px;
+                            }
+                            ul{
+                                padding: 0 15px;
+                                li{
+                                    list-style: disc;
+                                    color: $main-red-cl;
+                                    margin-bottom: 5px;
+                                    span{
+                                        color: black;
+                                        font-size: 12px;
+                                        line-height: 1.8;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .clear{
+                        clear: both;
+                    }
+                }
+                .product-btn{
+                    padding: 15px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #eee;
+                    margin-bottom: 15px;
+                    justify-content: flex-end;
+                    .delete-btn{
+                        font-size: 12px;
+                        color: $red-price-cl;
+                        margin-right: 15px;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    .cart-quantity{
+                        display: flex;
+                        >li{
+                            a{
+                                padding: 5px 10px;
+                                border: 1px solid #ddd;
+                                font-size: 16px;
+                                width: 35px;
+                                text-align: center;
+                                color: #3c3d41;
+                                &:hover{
+                                    background: #eee;
+                                }
+                            }
+                            input{
+                                height: 100%;
+                                // padding: 5px 10px;
+                                border: 1px solid #ddd;
+                                font-size: 16px;
+                                width: 35px;
+                                text-align: center;
+                                color: #3c3d41;
+                                outline: none;
+                                &:hover{
+                                    background: #eee;
+                                }
+                            }
+                        }
+                    }
+                }
+                .deal-sale{
+                    .box-container{
+                        margin-bottom: 15px;
+                        background: white;
+                        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+                    }
+                    .row-title{
+                        padding: 10px;
+                        background-color: black;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .col-left{
+                            max-width: 70%;
+                            font-size: 18px;
+                            color: white;
+                            strong{
+                                font-weight: bold;
+                                margin-left: 4px;
+                                color: inherit;
+                            }
+                            a{
+                                color: inherit;
+                            }
+                        }
+                        .col-right{
+                            display: flex;
+                            align-items: center;
+                            color: white;
+                            a{
+                                color: inherit;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                            
+                        }
+                    }
+                    .list-product{
+                        overflow: hidden;
+                        padding-bottom: 10px;
+                        background-color: black;
+                        .list-product__carousel{
+                            padding-left: 5px;
+                        }
+                        .carousel-cell{
+                            width: 29%;
+                            .cell__inner{
+                                background-color: white;
+                                position: relative;
+                                overflow: hidden;
+                                margin: 5px;
+                                border-radius: 4px;
+                                .percent-tag{
+                                    border-top-right-radius: 4px;
+                                    z-index: 9;
+                                    position: absolute;
+                                    background: $red-price-cl;
+                                    display: inline-block;
+                                    width: 55px;
+                                    height: 55px;
+                                    clip-path: polygon(100% 0, 0 0, 100% 100%);
+                                    top: 0px;
+                                    right: -1px;
+                                    font-family: sans-serif;
+                                    span{
+                                        font-weight: 500;
+                                        color: white;
+                                        font-size: 14px;
+                                        position: absolute;
+                                        right: 4px;
+                                        top: 5px;
+                                        transform: rotate(45deg);
+                                        display: block;
+                                    }
+                                }
+                                .img{
+                                    width: 100%;
+                                    padding: 10px;
+                                    padding-bottom: 0;
+                                    display: flex;
+                                    align-items: center;
+                                    position: relative;
+                                    justify-content: center;
+                                    img{
+                                        transition: .3s;
+                                        width: auto;
+                                        height: 85px;
+                                        object-fit: cover;
+                                        padding: 15px;
+                                    }
+                                }
+                                .desc{
+                                    padding: 0 10px;
+                                    padding-bottom: 10px;
+                                    .name{
+                                        text-align: center;
+                                        font-family: sans-serif;
+                                        font-weight: 700;
+                                        font-size: 13px;
+                                        color: $text-cl;
+                                        line-height: 1.4em;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;
+                                        margin-bottom: 10px;
+                                        &:hover{
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                    .price{
+                                        margin-bottom: 5px;
+                                        .new-price{
+                                            margin-right: 5px;
+                                            color: $red-price-cl;
+                                            font-size: 13px;
+                                            font-family: sans-serif;
+                                            font-weight: 700;
+                                        }
+                                        .old-price{
+                                            color: $config-txt-cl;
+                                            font-size: 12px;
+                                            text-decoration: line-through;
+                                            
+                                        }
+                                    }
+                                    .add-btn{
+                                        background-color: $red-price-cl;
+                                        border: none;
+                                        color: white;
+                                        line-height: 27px;
+                                        font-size: 12px;
+                                        font-weight: 700;
+                                        text-align: center;
+                                        &:hover{
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .flickity-button{
+                            background: rgba(white, 0.6);
+                            color: black;
+                            width: 60px;
+                            height: 60px;
+                            transition: .2s;
+                            box-shadow: 0 0 4px 0 rgba(black, 0.2);
+                            &.next{
+                                right: -30px;
+                                .flickity-button-icon{
+                                    width: 40%;
+                                    height: 40%;
+                                    top: 30%;
+                                    left: 5%;
+                                }
+                            }
+                            &.previous{
+                                left: -30px;
+                                .flickity-button-icon{
+                                    width: 40%;
+                                    height: 40%;
+                                    top: 30%;
+                                    left: 56%;
+                                }
+                            }
+                        }
+                    }
+                    @include mobile{
+                        .list-product {
+                            .carousel-cell{
+                                width: 43%;
+                            }
+                        }
+                    }
+                }
+                .coupon{
+                    padding: 0 15px 15px 15px;
+                    border-bottom: 1px solid #ddd;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        font-size: 14px;
+                        display: list-item;
+                    }
+                    input{
+                        width: 35%;
+                        max-width: 200px;
+                        padding: 3px;
+                        outline: none;
+                        border: solid 1px #eee;
+                        background: #fff;
+                        margin-left: 15px;
+                        height: 30px;
+                    }
+                    .coupon-btn{
+                        padding: 6px 10px;
+                        color: #fff;
+                        border-radius: 3px;
+                        font-size: 12px;
+                        height: 30px;
+                        margin-left: 5px;
+                    }
+                }
+                .show-coupon{
+                    padding: 15px;
+                    border-bottom: 1px solid #eee;
+                    .item{
+                        padding: 5px 0;
+                    }
+                    p{
+                        font-size: 14px;
+                        &:first-child{
+                            display: list-item;
+                        }
+                    }
+                    .price{
+                        font-family: sans-serif;
+                        font-weight: 700;
+                        color: $red-price-cl;
+                        font-size: 16px;
+                    }
+                }
+                .payment{
+                    padding: 10px 15px;
+                    
+                    >p{
+                        &:first-child{
+                            color: $red-price-cl;
+                            text-align: right;
+                            font-size: 12px;
+                            padding: 10px 0;
+                        }
+                    }
+                    .payment__row{
+                        margin: 15px 0;
+                        font-family: sans-serif;
+                        font-weight: 500;
+                        h2{
+                            font-size: 20px;
+                            margin-bottom: 15px;
+                            font-family: sans-serif;
+                            font-weight: 700;
+                        }
+                        .cus-data{
+                            font-size: 12px;
+                            color: black;
+                            .edit{
+                                display: inline;
+                                color: $red-price-cl;
+                                text-decoration: underline;
+                            }
+                        }
+                        .wrap-cus-data{
+                            display: none;
+                            .left{
+                                padding-right: 5px;
+                                margin-bottom: 10px;
+                            }
+                            .right{
+                                padding-left: 5px;
+                                margin-bottom: 10px;
+                            }
+                            .col-full{
+                                margin-bottom: 10px;
+                            }
+                            .vat-checkbox{
+                                display: flex;
+                                .vat__item{
+                                    display: flex;
+                                    &.not-allowed{
+                                        input{
+                                            cursor: not-allowed;
+                                        }
+                                    }
+                                    input{
+                                        width: auto;
+                                        height: auto;
+                                    }
+                                    label{
+                                        font-size: 12px;
+                                        margin: 0;
+                                        margin-left: 3px;
+                                    }
+                                }
+                                .note{
+                                    font-size: 11px;
+                                    margin-left: 50px;
+                                    font-style: italic;
+                                }
+                            }
+                            label{
+                                display: block;
+                                margin-bottom: 5px;
+                                font-size: 12px;
+                            }
+                            input{
+                                outline: none;
+                                height: 30px;
+                                width: 100%;
+                                padding: 3px;
+                                border: solid 1px #eee;
+                                background: #fff;
+                                color: #2f2f2f;
+                                font-size: 12px;
+                            }
+                            .vat-form-box{
+                                display: none;
+                                width: 100%;
+                                margin-top: 10px;
+                            }
+                        }
+                        .ship-method-wrap{
+                            display: flex;
+                            align-items: center;
+                            .method__item{
+                                display: flex;
+                                margin-right: 10px;
+                            }
+                            label{
+                                font-size: 12px;
+                            }
+                        }
+                        .method-pickup{
+                            display: none;
+                            background: #eee;
+                            margin-top: 10px;
+                            padding: 10px;
+                            position: relative;
+                            &.active{
+                                display: block;
+                            }
+                            .list__shop{
+                                .select-area{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .city{
+                                        max-height: 45px;
+                                        position: relative;
+                                        border-radius: 3px;
+                                        width: 48%;
+                                        padding: 15px 10px;
+                                        background-color: white;
+                                        border: 1px solid #d9d9d9;
+                                        &:after{
+                                            content: '';
+                                            width: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            right: 10px;
+                                            border-top: 6px solid #288ad6;
+                                            border-left: 6px solid transparent;
+                                            border-right: 6px solid transparent;
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            position: absolute;
+                                        }
+                                        span{
+                                            font-size: 14px;
+                                            color: $blue-link-cl;
+                                        }
+                                        .province{
+                                            display: none;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 50px;
+                                            padding: 10px;
+                                            background-color: white;
+                                            width: 100%;
+                                            border: 1px solid #d9d9d9;
+                                            &.active{
+                                                display: block;
+                                            }
+                                        }
+                                        .form-group{
+                                            position: relative;
+                                            input{
+                                                width: 100%;
+                                                height: 35px;
+                                                border: 1px solid #d9d9d9;
+                                                padding: 5px;
+                                                padding-right: 20px;
+                                                border-radius: 3px;
+                                                font-size: 12px;
+                                                outline: none;
+                                            }
+                                            .search-icon{
+                                                position: absolute;
+                                                width: 14px;
+                                                top: 50%;
+                                                right: 10px;
+                                                transform: translateY(-50%);
+                                            }
+                                        }
+                                        .scroll-list{
+                                            padding-top: 8px;
+                                            max-height: 170px;
+                                            overflow: auto;
+                                            width: 100%;
+                                            ul{
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                            }
+                                            li{
+                                                color: $blue-link-cl;
+                                                font-size: 13px;
+                                                width: 50%;
+                                                margin-bottom: 5px;
+                                            }
+                                            a{
+                                                color: $blue-link-cl;
+                                                font-size: 13px;
+                                            }
+                                        }
+                                    }
+                                    .district{
+                                        max-height: 45px;
+                                        position: relative;
+                                        border-radius: 3px;
+                                        width: 48%;
+                                        padding: 15px 10px;
+                                        background-color: white;
+                                        border: 1px solid #d9d9d9;
+                                        &:after{
+                                            content: '';
+                                            width: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            right: 10px;
+                                            border-top: 6px solid #288ad6;
+                                            border-left: 6px solid transparent;
+                                            border-right: 6px solid transparent;
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            position: absolute;
+                                        }
+                                        span{
+                                            font-size: 14px;
+                                            color: $blue-link-cl;
+                                        }
+                                        .district__list{
+                                            display: none;
+                                            position: absolute;
+                                            right: 0;
+                                            top: 50px;
+                                            padding: 10px;
+                                            background-color: white;
+                                            width: 310px;
+                                            border: 1px solid #d9d9d9;
+                                            &.active{
+                                                display: block;
+                                            }
+                                        }
+                                        .form-group{
+                                            position: relative;
+                                            input{
+                                                width: 100%;
+                                                height: 35px;
+                                                border: 1px solid #d9d9d9;
+                                                padding: 5px;
+                                                padding-right: 20px;
+                                                border-radius: 3px;
+                                                font-size: 12px;
+                                                outline: none;
+                                            }
+                                            .search-icon{
+                                                position: absolute;
+                                                width: 14px;
+                                                top: 50%;
+                                                right: 10px;
+                                                transform: translateY(-50%);
+                                            }
+                                        }
+                                        .scroll-list{
+                                            padding-top: 8px;
+                                            max-height: 170px;
+                                            overflow: auto;
+                                            width: 100%;
+                                            ul{
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                            }
+                                            li{
+                                                color: $blue-link-cl;
+                                                font-size: 13px;
+                                                width: 50%;
+                                                margin-bottom: 5px;
+                                            }
+                                            a{
+                                                color: $blue-link-cl;
+                                                font-size: 13px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .list-store-result{
+                                    padding-top: 5px;
+                                    height: 200px;
+                                    overflow-x: hidden;
+                                    overflow-y: auto;
+                                    li{
+                                        padding: 10px 5px;
+                                        border-bottom: 1px solid #ddd;
+                                        span{
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .method-delivery{
+                            display: none;
+                            background: #eee;
+                            margin-top: 10px;
+                            padding: 10px;
+                            position: relative;
+                            &.active{
+                                display: block;
+                            }
+                            .list__shop{
+                                .select-area{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .city{
+                                        max-height: 45px;
+                                        position: relative;
+                                        border-radius: 3px;
+                                        width: 48%;
+                                        padding: 15px 10px;
+                                        background-color: white;
+                                        border: 1px solid #d9d9d9;
+                                        &:after{
+                                            content: '';
+                                            width: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            right: 10px;
+                                            border-top: 6px solid #288ad6;
+                                            border-left: 6px solid transparent;
+                                            border-right: 6px solid transparent;
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            position: absolute;
+                                        }
+                                        span{
+                                            font-size: 14px;
+                                            color: $blue-link-cl;
+                                        }
+                                        .province{
+                                            display: none;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 50px;
+                                            padding: 10px;
+                                            background-color: white;
+                                            width: 100%;
+                                            border: 1px solid #d9d9d9;
+                                            &.active{
+                                                display: block;
+                                            }
+                                        }
+                                        .form-group{
+                                            position: relative;
+                                            input{
+                                                width: 100%;
+                                                height: 35px;
+                                                border: 1px solid #d9d9d9;
+                                                padding: 5px;
+                                                padding-right: 20px;
+                                                border-radius: 3px;
+                                                font-size: 12px;
+                                                outline: none;
+                                            }
+                                            .search-icon{
+                                                position: absolute;
+                                                width: 14px;
+                                                top: 50%;
+                                                right: 10px;
+                                                transform: translateY(-50%);
+                                            }
+                                        }
+                                        .scroll-list{
+                                            padding-top: 8px;
+                                            max-height: 170px;
+                                            overflow: auto;
+                                            width: 100%;
+                                            ul{
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                            }
+                                            li{
+                                                color: $blue-link-cl;
+                                                font-size: 13px;
+                                                width: 50%;
+                                                margin-bottom: 5px;
+                                            }
+                                            a{
+                                                color: $blue-link-cl;
+                                                font-size: 13px;
+                                            }
+                                        }
+                                    }
+                                    .district{
+                                        max-height: 45px;
+                                        position: relative;
+                                        border-radius: 3px;
+                                        width: 48%;
+                                        padding: 15px 10px;
+                                        background-color: white;
+                                        border: 1px solid #d9d9d9;
+                                        &:after{
+                                            content: '';
+                                            width: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            right: 10px;
+                                            border-top: 6px solid #288ad6;
+                                            border-left: 6px solid transparent;
+                                            border-right: 6px solid transparent;
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            position: absolute;
+                                        }
+                                        span{
+                                            font-size: 14px;
+                                            color: $blue-link-cl;
+                                        }
+                                        .district__list{
+                                            display: none;
+                                            position: absolute;
+                                            right: 0;
+                                            top: 50px;
+                                            padding: 10px;
+                                            background-color: white;
+                                            width: 310px;
+                                            border: 1px solid #d9d9d9;
+                                            &.active{
+                                                display: block;
+                                            }
+                                        }
+                                        .form-group{
+                                            position: relative;
+                                            input{
+                                                width: 100%;
+                                                height: 35px;
+                                                border: 1px solid #d9d9d9;
+                                                padding: 5px;
+                                                padding-right: 20px;
+                                                border-radius: 3px;
+                                                font-size: 12px;
+                                                outline: none;
+                                            }
+                                            .search-icon{
+                                                position: absolute;
+                                                width: 14px;
+                                                top: 50%;
+                                                right: 10px;
+                                                transform: translateY(-50%);
+                                            }
+                                        }
+                                        .scroll-list{
+                                            padding-top: 8px;
+                                            max-height: 170px;
+                                            overflow: auto;
+                                            width: 100%;
+                                            ul{
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                            }
+                                            li{
+                                                color: $blue-link-cl;
+                                                font-size: 13px;
+                                                width: 50%;
+                                                margin-bottom: 5px;
+                                            }
+                                            a{
+                                                color: $blue-link-cl;
+                                                font-size: 13px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .delivery-address{
+                                    width: 100%;
+                                    border: 1px solid #d9d9d9;
+                                    background: #fff;
+                                    border-radius: 3px;
+                                    font-size: 14px;
+                                    color: #288ad6;
+                                    padding: 15px;
+                                    margin-top: 10px;
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .payment-selection-btn{
+                    margin: 15px 0;
+                    .divider{
+                        text-align: center;
+                        margin: 20px 0;
+                        position: relative;
+                        &:after{
+                            content: '';
+                            border-bottom: 1px solid #ddd;
+                            width: 100%;
+                            position: absolute;
+                            left: 0;
+                            height: 50%;
+                        }
+                        span{
+                            font-size: 18px;
+                            padding: 0 10px;
+                            background: #fff;
+                            position: relative;
+                            z-index: 1;
+                        }
+                    }
+                }
+                .visa-pay, .momo-pay{
+                    padding: 10px 0;
+                    display: flex;
+                    align-items: baseline;
+                    label{
+                        font-size: 12px;
+                        font-family: sans-serif;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        img{
+                            width: 40px;
+                            margin: 0 5px;
+                        }
+                    }
+                    .detail{
+                        font-size: 12px;
+                        color: $main-red-cl;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .dieu-khoan{
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    font-size: 12px;
+                    text-align: center;
+                    color: #999;
+                    label{
+                        display: inline-flex;
+                        text-decoration: underline;
+                        a{
+                            color: $main-red-cl;
+                            margin: 0 3px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mobile{
+        margin-top: 0;
+        .checkout{
+            >.container{
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .main-content{
+                width: auto;
+                .module{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .left{
+                        margin-bottom: 5px;
+                    }
+                    .right{
+                        h2{
+                            font-size: 13px;
+                            font-family: sans-serif;
+                            font-weight: 700;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+                .cart{
+                    .product-btn, .product-info, .coupon, .show-coupon, .payment{
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                    .product-info{
+                        .left{
+                            max-width: 65px;
+                            min-width: 65px;
+                        }
+                        .right{
+                            .promotion-detail{
+                                display: none;
+                            }
+                        }
+                    }
+                    .coupon{
+                        >span{
+                            display: none;
+                        }
+                        input{
+                            width: 100%;
+                            margin-left: 0;
+                            max-width: 230px;
+                        }
+                    }
+                    .payment{
+                        p{
+                            &:first-child{
+                                text-align: center;
+                            }
+                        }
+                        .payment__row{
+                            h2{
+                                font-size: 16px;
+                            }
+                            .wrap-cus-data{
+                                .left, .right{
+                                    padding-right: 7px;
+                                    padding-left: 7px;
+                                }
+                            }
+                            .method-pickup {
+                                .list__shop {
+                                    .select-area {
+                                        .city {
+                                            .province{
+                                                width: 310px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .dieu-khoan{
+                        label{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
